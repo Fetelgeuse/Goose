@@ -64,7 +64,7 @@ async def upiq(event: Event):
     
     
 @client.command("top", "/")
-async def xp(event: Event):
+async def top(event: Event):
 	try:
 		await sql_game(f"UPDATE users SET nickname = '{event.author.nickname}' WHERE id = '{event.uid}'")
 		index = 0
