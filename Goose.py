@@ -13,12 +13,12 @@ lock = RLock()
 db_game = sqlite3.connect("game.db", check_same_thread=False)
 game_cursor = db_game.cursor()
 
-#game_cursor.execute("""CREATE TABLE IF NOT EXISTS users (
-#	nickname TEXT, 
-#	id TEXT, 
-#	iq INTEGER NOT NULL DEFAULT 1,
-#	iq_time Integer
-#	)""")
+game_cursor.execute("""CREATE TABLE IF NOT EXISTS users (
+	nickname TEXT, 
+	id TEXT, 
+	iq INTEGER NOT NULL DEFAULT 1,
+	iq_time Integer
+	)""")
 db_game.commit()
 
 
